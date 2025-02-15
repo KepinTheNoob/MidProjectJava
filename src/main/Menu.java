@@ -13,7 +13,7 @@ public class Menu {
 	
 	public void displayStartMenu() {
 		Integer choice;
-		do {
+		while(true ) {
 			System.out.println("Pick your choice: ");
 			System.out.println("1. Insert data karyawan");
 			System.out.println("2. View data karyawan");
@@ -22,7 +22,7 @@ public class Menu {
 			System.out.println("Your choice: ");
 			choice = scan.nextInt();
 			choiceHandler(choice);
-		} while(choice != 4);
+		}
 		
 	}
 	
@@ -222,6 +222,6 @@ public class Menu {
 
         System.out.println("Karyawan dengan kode " + karyawanList.get(index).getKode() + " berhasil dihapus");
         karyawanList.remove(index);
-        System.out.print("ENTER to return");
+        System.out.println("ENTER to return");
     }
 }
